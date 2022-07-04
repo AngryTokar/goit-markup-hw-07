@@ -1,6 +1,6 @@
 /* Наши преимущества */
 
-.list.list__unicals {
+.list.benefits__list{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   padding-bottom: 0;
 }
 
-.list__benefits-icon{
+.benefits__icon-wrapper{
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
@@ -21,7 +21,7 @@
   border-radius: $--style-botton-radius;
 }
 
-.unicals__item {
+.benefits__item {
   width: 270px;
 }
 

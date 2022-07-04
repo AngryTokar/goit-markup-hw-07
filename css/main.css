@@ -1,4 +1,18 @@
 @charset "UTF-8";
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
 body {
   background-color: #ffffff;
   color: #212121;
@@ -66,7 +80,7 @@ img {
 }
 
 /* Лого */
-.logo__web {
+.logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -112,12 +126,12 @@ img {
   display: flex;
 }
 
-.header-icon {
+.contacts__icon {
   fill: currentColor;
   margin-right: 10px;
 }
 
-.top-menu__link.link,
+.header-menu.link,
 .contacts.header.link {
   position: relative;
   padding-top: 32px;
@@ -125,14 +139,14 @@ img {
   border: none;
 }
 
-.top-menu__link.current-link {
+.header-menu.current-link {
   color: #2196f3;
 }
 
-.top-menu__link.current-link::after {
+.header-menu.current-link::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   display: block;
   width: 100%;
@@ -141,12 +155,12 @@ img {
   border-radius: 2px;
 }
 
-.header__list-link:not(:last-child),
+.contacts-item:not(:last-child),
 .header__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.top-menu__link {
+.header-menu {
   line-height: 1.14em;
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -154,7 +168,7 @@ img {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.top-menu__link:hover, .top-menu__link:focus {
+.header-menu:hover, .header-menu:focus {
   color: #2196f3;
 }
 
@@ -215,7 +229,7 @@ img {
 }
 
 /* Наши преимущества */
-.list.list__unicals {
+.list.benefits__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,7 +246,7 @@ img {
   padding-bottom: 0;
 }
 
-.list__benefits-icon {
+.benefits__icon-wrapper {
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
@@ -249,7 +263,7 @@ img {
   border-radius: 4px;
 }
 
-.unicals__item {
+.benefits__item {
   width: 270px;
 }
 
@@ -989,18 +1003,4 @@ strong {
 }
 .button-modal:hover, .button-modal:focus {
   background-color: #188ce8;
-}
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
 }/*# sourceMappingURL=main.css.map */
